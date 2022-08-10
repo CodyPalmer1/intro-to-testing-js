@@ -13,18 +13,21 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
-// Unit test for sayHello() function
-describe('sayHello', function() {
-    it('should be a defined function', function() {
-        expect(typeof sayHello()).toBe('function');
+
+describe('sayHello', function(){
+    it('should be defined a function', function(){
+        expect(typeof sayHello()).toBe('string')
     });
-    it('should return a string when called', function() {
-        expect(typeof sayHello()).toBe("string");
+    it('should return a string', function(){
+        expect(typeof sayHello()).toBe('string')
     });
-    it('should return the string "Hello, Name" when executed', function() {
-        expect(sayHello()).toBe("Hello, World!");
+    it('should return "Hello, Jane"', function(){
+        expect(typeof sayHello("Jane")).toBe('string')
     });
-    it("should never return 'undefined' when called", function() {
-        expect(sayHello()).not.toBe(undefined);
+    it('should return "Hello, Alex"', function(){
+        expect(sayHello("Alex")).toBe("Hello, Alex")
+    });
+    it('should return "Hello, Pat"', function(){
+        expect(sayHello("Pat")).toBe("Hello, Pat")
     });
 });
